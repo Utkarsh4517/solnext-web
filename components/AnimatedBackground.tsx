@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AnimatedBackground = () => {
+const AnimatedBackground = ({ className = '' }) => {
   return (
-    <div className="fixed inset-0 -z-10">
+    <div className={`absolute inset-0 -z-10 ${className}`}>
       <div className="absolute inset-0 bg-gradient-to-r from-black via-purple-900 to-black opacity-70" />
       <div className="absolute inset-0 animate-pulse">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-800 opacity-30 blur-3xl" />
