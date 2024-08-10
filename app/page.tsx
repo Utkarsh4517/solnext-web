@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { ArrowRight, Download } from 'lucide-react';
 import solnext from '../public/solnext-mockup.png';
-import AnimatedBackground from '../components/AnimatedBackground';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import FeatureCard from "@/components/FeatureCard";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Experience Solnext</h2>
-              <p className="text-xl mb-8">Securely power your solana experience with solnext.</p>
+              <p className="text-xl mb-8">Securely power your solana experience with solnext mobile wallet.</p>
               <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300">
                 Get Started <ArrowRight className="ml-2" />
               </button>
@@ -36,14 +37,11 @@ export default function Home() {
 
         <section id="features" className="py-16 backdrop-blur-lg bg-white/10">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Solnext Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {['Intuitive Interface', 'Blazing Fast', 'Secure & Private'].map((feature, index) => (
-                <div key={index} className="bg-white/20 p-6 rounded-lg backdrop-blur-md">
-                  <h3 className="text-xl font-semibold mb-2">{feature}</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              ))}
+              <FeatureCard feature='Intuitive Interface' description='Receive and Send SOL/USDC in an interactive manner to any wallet.'></FeatureCard>
+              <FeatureCard feature='Proudly Open Source 💚' description='Solnext is a cross platform mobile app built with Flutter framework and is proudly open source.'></FeatureCard>
+              <FeatureCard feature='Swap Tokens' description='Securely swap SOL/USDC using Jupiter APIs or Solnext SWAP*'></FeatureCard>
             </div>
           </div>
         </section>
