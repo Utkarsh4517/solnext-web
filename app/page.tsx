@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { ArrowRight, Download } from 'lucide-react';
+import solnext from '../public/solnext-mockup.png';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 to-indigo-900 text-white">
       <header className="container mx-auto px-4 py-8">
         <nav className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">SolNext App</h1>
+          <h1 className="text-2xl font-bold">Solnext</h1>
           <ul className="flex space-x-4">
             <li><a href="#features" className="hover:text-purple-200">Features</a></li>
             <li><a href="#download" className="hover:text-purple-200">Download</a></li>
@@ -18,14 +19,14 @@ export default function Home() {
       <main className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">Experience Solext</h2>
-            <p className="text-xl mb-8">Lorel ipsum</p>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">Experience Solnext</h2>
+            <p className="text-xl mb-8">Securely power your solana experience with solnext.</p>
             <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300">
               Get Started <ArrowRight className="ml-2" />
             </button>
           </div>
           <div className="md:w-1/2">
-            <Image src="" alt="App Screenshot" width={300} height={600} className="rounded-lg shadow-xl" />
+            <Image src={solnext} alt="App Screenshot" />
           </div>
         </div>
       </main>
