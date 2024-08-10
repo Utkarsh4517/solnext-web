@@ -15,6 +15,10 @@ export default function Home() {
     router.push('https://play.google.com/store/apps/details?id=com.opxica.solnext&hl=en'); 
   };
 
+  const viewGithub = () => {
+    router.push('https://github.com/Utkarsh4517/solnext.git'); 
+  };
+
   return (
     <div className="min-h-screen text-white">
       <div className="relative">
@@ -33,7 +37,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Experience Solnext Currently live on devnet</h2>
-              <p className="text-xl mb-8">Securely power your solana experience with solnext mobile wallet.</p>
+              <p className="text-xl">Securely power your solana experience with solnext mobile wallet.
+              </p>
+              <div className="text-sm underline mb-8" onClick={viewGithub}>
+                  View on Github
+                </div>
               <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300" onClick={handleGetStaered}>
                 Get Started <ArrowRight className="ml-2" />
               </button>
