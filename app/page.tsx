@@ -1,10 +1,20 @@
+"use client";
 import Image from "next/image";
 import { ArrowRight, Download } from 'lucide-react';
 import solnext from '../public/solnext-mockup.png';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import FeatureCard from "@/components/FeatureCard";
+import {useRouter} from "next/navigation";
+
+
 
 export default function Home() {
+
+  const router = useRouter();
+  const handleGetStaered = () => {
+    router.push('https://play.google.com/store/apps/details?id=com.opxica.solnext&hl=en'); 
+  };
+
   return (
     <div className="min-h-screen text-white">
       <div className="relative">
@@ -15,7 +25,6 @@ export default function Home() {
             <ul className="flex space-x-4">
               <li><a href="#features" className="hover:text-purple-200 transition duration-300">Features</a></li>
               <li><a href="#download" className="hover:text-purple-200 transition duration-300">Download</a></li>
-              <li><a href="#contact" className="hover:text-purple-200 transition duration-300">Contact</a></li>
             </ul>
           </nav>
         </header>
@@ -25,7 +34,7 @@ export default function Home() {
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Experience Solnext Currently live on devnet</h2>
               <p className="text-xl mb-8">Securely power your solana experience with solnext mobile wallet.</p>
-              <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300">
+              <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300" onClick={handleGetStaered}>
                 Get Started <ArrowRight className="ml-2" />
               </button>
             </div>
@@ -66,7 +75,7 @@ export default function Home() {
             <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300">
               <Download className="mr-2" /> App Store
             </button>
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold flex items-center hover:bg-purple-100 transition duration-300" onClick={handleGetStaered}>
               <Download className="mr-2" /> Google Play
             </button>
           </div>
@@ -76,11 +85,7 @@ export default function Home() {
       <footer id="contact" className="py-8 bg-[#111111]">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2024 SolNext App. All rights reserved.</p>
-          <div className="mt-4">
-            <a href="#" className="text-purple-300 hover:text-white mx-2 transition duration-300">Privacy Policy</a>
-            <a href="#" className="text-purple-300 hover:text-white mx-2 transition duration-300">Terms of Service</a>
-            <a href="#" className="text-purple-300 hover:text-white mx-2 transition duration-300">Contact Us</a>
-          </div>
+          
         </div>
       </footer>
     </div>
